@@ -1,0 +1,49 @@
+//
+//  CoursesFieldStringTest.m
+//  CourseraDemo
+//
+//  Created by 臧其龙 on 15/12/14.
+//  Copyright © 2015年 臧其龙. All rights reserved.
+//
+
+#import <XCTest/XCTest.h>
+#import "NSString+CoursesFields.h"
+
+@interface CoursesFieldStringTest : XCTestCase
+
+@end
+
+@implementation CoursesFieldStringTest
+
+- (void)setUp {
+    [super setUp];
+    // Put setup code here. This method is called before the invocation of each test method in the class.
+}
+
+- (void)tearDown {
+    // Put teardown code here. This method is called after the invocation of each test method in the class.
+    [super tearDown];
+}
+
+- (void)testExample {
+    // This is an example of a functional test case.
+    // Use XCTAssert and related functions to verify your tests produce the correct results.
+}
+
+- (void)testcourseFieldsWithArray
+{
+    NSString *result = @"courses?fields=language,session";
+    NSArray *fieldArray = @[@"language", @"session"];
+    NSString *testResult = [NSString courseFieldsWithArray:fieldArray];
+    XCTAssert([testResult isEqualToString:result]);
+    
+}
+
+- (void)testPerformanceExample {
+    // This is an example of a performance test case.
+    [self measureBlock:^{
+        // Put the code you want to measure the time of here.
+    }];
+}
+
+@end
